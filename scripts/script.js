@@ -1,33 +1,69 @@
-// ids
+// ids for nav counters
 const hearts = document.getElementById("heart-counter")
-const coins = document.getElementById("coin-counter")
 const copies = document.getElementById("copy-counter")
+const coins = document.getElementById("coin-counter")
 
-// from card national
-const nationalHeartBtn = document.getElementById("national-heart-btn")
-const nationalCallNumber = document.getElementById("national-call-number")
-const nationalCategory = document.getElementById("national-card-category")
-const nationalCopyBtn = document.getElementById("national-copy-btn")
-const nationalCallBtn = document.getElementById("national-call-btn")
+// classes for buttons
+const cardBtns = document.querySelectorAll(".heart-btn")
+const copyBtns = document.querySelectorAll(".copy-btn")
+const callBtns = document.querySelectorAll(".call-btn")
 
-// from cards police
-const policeHeartBtn = document.getElementById("police-heart-btn")
-const policeCallNumber = document.getElementById("policeCallNumber")
-const policeCategory = document.getElementById("policeCategory")
-const policeCopyBtn = document.getElementById("police-copy-btn")
-const policeCallBtn = document.getElementById("police-call-btn")
+// titles
+// const title = document.querySelectorAll(".card-title")
 
-// from cards national
-const fireHeartBtn = document.getElementById("fire-heart-btn")
-const fireCallNumber = document.getElementById("fire-call-number")
-const fireCategory = document.getElementById("fire-category")
-const fireCopyBtn = document.getElementById("fire-copy-btn")
-const fireCallBtn = document.getElementById("fire-call-btn")
+// call history
+const callHistoryBtn = document.getElementById("call-history-btn")
+const callHistoryContainer = document.getElementById("call-history-container")
+const callHistory = [];
 
-// from cards ambulance
-const ambulanceHeartBtn = document.getElementById("ambulance-heart-btn")
+// heart btn functionalities
+let countHearts = 0;
+for (btn of cardBtns) {
+    btn.addEventListener("click", function () {
+        countHearts++;
+        hearts.innerText = countHearts;
+    })
+}
 
-// classes
-const cardBtns = document.getElementsByClassName("card-btn")
-const copyBtns = document.getElementsByClassName("copy-btn")
-const callBtns = document.getElementsByClassName("call-btn")
+// call btn functionalities
+let countCoins = 100;
+for (const btn of callBtns) {
+    btn.addEventListener("click", function () {
+        countCoins = countCoins - 20;
+        coins.innerText = countCoins;
+        const coinNumber = parseInt(coins.innerText)
+
+        if (coinNumber < 20) {
+            alert("You Don't Have Sufficient Balance");
+            return;
+        }
+
+        const cardT = btn.parentElement.parentElement;
+        const title = cardT.querySelector(".card-title")
+        const cardTitle = title.innerText;
+
+        const cardN = btn.parentElement.parentElement;
+        const number = cardN.querySelector(".card-numbers")
+        const copyCardNumber = number.innerText;
+        alert("📞 Calling... " + cardTitle + " " + copyCardNumber)
+
+    })
+}
+
+// copy btn functionalities
+let countCopies = 0;
+for (const btn of copyBtns) {
+    btn.addEventListener("click", function () {
+        countCopies++;
+        copies.innerText = countCopies;
+
+        const card = btn.parentElement.parentElement;
+        const number = card.querySelector(".card-numbers")
+        const copyCardNumber = number.innerText;
+
+        navigator.clipboard.writeText(copyCardNumber)
+            .then(function () {
+                alert("The number is copied  " + copyCardNumber)
+            })
+    })
+}
