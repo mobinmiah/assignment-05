@@ -25,6 +25,7 @@
         <nav>
             <div class="flex justify-between items-center py-[1.5rem]
         px-[3.75rem]">
+                <!-- logo -->
                 <div class="flex items-center">
                     <div class="w-[50px]">
                         <img src="./assets/logo.png" alt="">
@@ -34,19 +35,21 @@
                     </div>
                 </div>
                 <div class="flex justify-evenly items-center gap-5">
+                    <!-- heart counter -->
                     <div class="flex items-center primary-bg rounded-[50px] h-[50px]">
                         <span id="heart-counter" class="text-[1rem] font-inter font-black ml-9 my-3.5">0</span>
                         <div class="w-[25px] ml-2.5 mr-9 my-3.5">
                             <img src="./assets/heart.png" alt="">
                         </div>
                     </div>
+                    <!-- coin counter -->
                     <div class="flex items-center primary-bg rounded-[50px] h-[50px]">
                         <span id="coin-counter" class="text-[1rem] font-inter font-black ml-9 my-3.5">100</span>
                         <div class="w-[25px] ml-2.5 mr-9 my-3.5">
                             <img src="./assets/coin.png" alt="">
                         </div>
                     </div>
-
+                    <!-- copy counter -->
                     <div class="flex items-center secondary-bg rounded-[50px] h-[50px] text-white gap-2.5 font-inter">
                         <span id="copy-counter" class="text-[1rem] ml-9 my-3.5">0</span>
                         <div class="mr-9">
@@ -55,27 +58,30 @@
                     </div>
                 </div>
             </div>
-            <div id="hero-area" class="hero flex flex-col text-center gradient-bg px-14 py-5">
-                <div class="w-[92px]">
-                    <img src="./assets/logo-dark.png" alt="">
-                </div>
-                <h1 class="font-madurai font-bold text-[2.5rem] text-white">Emergency Service Directory</h1>
-                <p class="font-madurai font-semibold text-[1.25rem] text-white">
-                    Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic
-                    of Bangladesh
-                </p>
-
-            </div>
         </nav>
+        <!-- hero area -->
+        <div id="hero-area" class="hero flex flex-col text-center gradient-bg px-14 py-5">
+            <div class="w-[92px]">
+                <img src="./assets/logo-dark.png" alt="">
+            </div>
+            <h1 class="font-madurai font-bold text-[2.5rem] text-white">Emergency Service Directory</h1>
+            <p class="font-madurai font-semibold text-[1.25rem] text-white">
+                Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic
+                of Bangladesh
+            </p>
+
+        </div>
     </header>
+    <!-- main section -->
     <main class="grid grid-cols-4 px-14 py-12 gap-7 primary-bg">
+        <!-- cards zone -->
         <div class="col-span-3 grid grid-cols-3 gap-7">
             <div class="cards p-8 rounded-[12px] bg-white">
                 <div class="card-head flex justify-between items-center">
                     <div class="w-[60px] bg-[#FFE3E2] rounded-2xl">
                         <img class="p-3.5" src="./assets/emergency.png" alt="">
                     </div>
-                    <div class="text-2xl gray-color">
+                    <div id="national-heart-btn" class="card-btn text-2xl gray-color">
                         <i class="fa-regular fa-heart"></i>
                     </div>
                 </div>
@@ -89,17 +95,18 @@
                         </p>
                     </div>
                     <div class="call-center mb-6">
-                        <p class="font-roboto font-bold text-[2rem] dark-color">999</p>
+                        <p id="national-call-number" class="font-roboto font-bold text-[2rem] dark-color">999</p>
                         <div class="category w-[53px] text-center bg-[#F2F2F2] rounded-2xl">
-                            <p class="font-madurai gray-color text-[18px] px-4 py-1.5">All</p>
+                            <p id="national-card-category" class="font-madurai gray-color text-[18px] px-4 py-1.5">All</p>
                         </div>
                     </div>
                     <div class="card-btns text-center flex justify-between">
-                        <button class="px-[55px] py-2.5 border border-[#D4D6D5] rounded-[8px] gray-color font-roboto">
+                        <button id="national-copy-btn" class=" copy-btn px-[55px] py-2.5 border border-[#D4D6D5] rounded-[8px] gray-color font-roboto">
                             <i class="fa-regular fa-copy"></i>
                             <span>Copy</span>
                         </button>
-                        <button class="px-[55px] py-2.5 border border-[#D4D6D5] rounded-[8px] secondary-bg font-roboto text-white">
+                        <button id="national-call-btn"
+                            class=" call-btn px-[55px] py-2.5 border border-[#D4D6D5] rounded-[8px] secondary-bg font-roboto text-white">
                             <i class="fa-solid fa-phone"></i>
                             <span>Call</span>
                         </button>
@@ -108,10 +115,10 @@
             </div>
             <div class="cards p-8 rounded-[12px] bg-white">
                 <div class="card-head flex justify-between items-center">
-                    <div class="w-[60px] bg-[#DFEFFF] rounded-2xl">
+                    <div class=" w-[60px] bg-[#DFEFFF] rounded-2xl">
                         <img class="p-3.5" src="./assets/police.png" alt="">
                     </div>
-                    <div class="text-2xl gray-color">
+                    <div id="police-heart-btn" class="card-btn text-2xl gray-color">
                         <i class="fa-regular fa-heart"></i>
                     </div>
                 </div>
@@ -125,17 +132,18 @@
                         </p>
                     </div>
                     <div class="call-center mb-6">
-                        <p class="font-roboto font-bold text-[2rem] dark-color">999</p>
-                        <div class="category w-[80px] text-center bg-[#F2F2F2] rounded-2xl">
+                        <p id="policeCallNumber" class="font-roboto font-bold text-[2rem] dark-color">999</p>
+                        <div id="policeCategory" class="category w-[80px] text-center bg-[#F2F2F2] rounded-2xl">
                             <p class="font-madurai gray-color text-[18px] px-4 py-1.5">Police</p>
                         </div>
                     </div>
                     <div class="card-btns text-center flex justify-between">
-                        <button class="px-[55px] py-2.5 border border-[#D4D6D5] rounded-[8px] gray-color font-roboto">
+                        <button id="police-copy-btn" class="copy-btn px-[55px] py-2.5 border border-[#D4D6D5] rounded-[8px] gray-color font-roboto">
                             <i class="fa-regular fa-copy"></i>
                             <span>Copy</span>
                         </button>
-                        <button class="px-[55px] py-2.5 border border-[#D4D6D5] rounded-[8px] secondary-bg font-roboto text-white">
+                        <button id="police-call-btn"
+                            class="copy-btn px-[55px] py-2.5 border border-[#D4D6D5] rounded-[8px] secondary-bg font-roboto text-white">
                             <i class="fa-solid fa-phone"></i>
                             <span>Call</span>
                         </button>
@@ -147,7 +155,7 @@
                     <div class="w-[60px] bg-[#FFE3E2] rounded-2xl">
                         <img class="p-3.5" src="./assets/fire-service.png" alt="">
                     </div>
-                    <div class="text-2xl gray-color">
+                    <div id="fire-heart-btn" class=" card-btn text-2xl gray-color">
                         <i class="fa-regular fa-heart"></i>
                     </div>
                 </div>
@@ -161,17 +169,18 @@
                         </p>
                     </div>
                     <div class="call-center mb-6">
-                        <p class="font-roboto font-bold text-[2rem] dark-color">999</p>
-                        <div class="category w-[60px] text-center bg-[#F2F2F2] rounded-2xl">
+                        <p id="fire-call-number" class="font-roboto font-bold text-[2rem] dark-color">999</p>
+                        <div id="fire-category" class="category w-[60px] text-center bg-[#F2F2F2] rounded-2xl">
                             <p class="font-madurai gray-color text-[18px] px-4 py-1.5">Fire</p>
                         </div>
                     </div>
                     <div class="card-btns text-center flex justify-between">
-                        <button class="px-[55px] py-2.5 border border-[#D4D6D5] rounded-[8px] gray-color font-roboto">
+                        <button id="fire-copy-btn" class=" copy-btn px-[55px] py-2.5 border border-[#D4D6D5] rounded-[8px] gray-color font-roboto">
                             <i class="fa-regular fa-copy"></i>
                             <span>Copy</span>
                         </button>
-                        <button class="px-[55px] py-2.5 border border-[#D4D6D5] rounded-[8px] secondary-bg font-roboto text-white">
+                        <button id="fire-call-btn"
+                            class="call-btn px-[55px] py-2.5 border border-[#D4D6D5] rounded-[8px] secondary-bg font-roboto text-white">
                             <i class="fa-solid fa-phone"></i>
                             <span>Call</span>
                         </button>
@@ -183,7 +192,7 @@
                     <div class="w-[60px] bg-[#FFE3E2] rounded-2xl">
                         <img class="p-3.5" src="./assets/ambulance.png" alt="">
                     </div>
-                    <div class="text-2xl gray-color">
+                    <div id="ambulance-heart-btn" class="card-btn text-2xl gray-color">
                         <i class="fa-regular fa-heart"></i>
                     </div>
                 </div>
@@ -207,7 +216,8 @@
                             <i class="fa-regular fa-copy"></i>
                             <span>Copy</span>
                         </button>
-                        <button class="px-[55px] py-2.5 border border-[#D4D6D5] rounded-[8px] secondary-bg font-roboto text-white">
+                        <button
+                            class="px-[55px] py-2.5 border border-[#D4D6D5] rounded-[8px] secondary-bg font-roboto text-white">
                             <i class="fa-solid fa-phone"></i>
                             <span>Call</span>
                         </button>
@@ -243,7 +253,8 @@
                             <i class="fa-regular fa-copy"></i>
                             <span>Copy</span>
                         </button>
-                        <button class="px-[55px] py-2.5 border border-[#D4D6D5] rounded-[8px] secondary-bg font-roboto text-white">
+                        <button
+                            class="px-[55px] py-2.5 border border-[#D4D6D5] rounded-[8px] secondary-bg font-roboto text-white">
                             <i class="fa-solid fa-phone"></i>
                             <span>Call</span>
                         </button>
@@ -279,7 +290,8 @@
                             <i class="fa-regular fa-copy"></i>
                             <span>Copy</span>
                         </button>
-                        <button class="px-[55px] py-2.5 border border-[#D4D6D5] rounded-[8px] secondary-bg font-roboto text-white">
+                        <button
+                            class="px-[55px] py-2.5 border border-[#D4D6D5] rounded-[8px] secondary-bg font-roboto text-white">
                             <i class="fa-solid fa-phone"></i>
                             <span>Call</span>
                         </button>
@@ -298,7 +310,7 @@
                 <div class="card-body pl-0">
                     <div class="card-titles mb-6">
                         <h3 class="card-titel font-madurai font-bold text-[1.5rem] dark-color">
-                        Electricity Helpline
+                            Electricity Helpline
                         </h3>
                         <p class="card-sub-title font-roboto gray-color text-[18px]">
                             Electricity Outage
@@ -315,7 +327,8 @@
                             <i class="fa-regular fa-copy"></i>
                             <span>Copy</span>
                         </button>
-                        <button class="px-[55px] py-2.5 border border-[#D4D6D5] rounded-[8px] secondary-bg font-roboto text-white">
+                        <button
+                            class="px-[55px] py-2.5 border border-[#D4D6D5] rounded-[8px] secondary-bg font-roboto text-white">
                             <i class="fa-solid fa-phone"></i>
                             <span>Call</span>
                         </button>
@@ -351,7 +364,8 @@
                             <i class="fa-regular fa-copy"></i>
                             <span>Copy</span>
                         </button>
-                        <button class="px-[55px] py-2.5 border border-[#D4D6D5] rounded-[8px] secondary-bg font-roboto text-white">
+                        <button
+                            class="px-[55px] py-2.5 border border-[#D4D6D5] rounded-[8px] secondary-bg font-roboto text-white">
                             <i class="fa-solid fa-phone"></i>
                             <span>Call</span>
                         </button>
@@ -387,7 +401,8 @@
                             <i class="fa-regular fa-copy"></i>
                             <span>Copy</span>
                         </button>
-                        <button class="px-[55px] py-2.5 border border-[#D4D6D5] rounded-[8px] secondary-bg font-roboto text-white">
+                        <button
+                            class="px-[55px] py-2.5 border border-[#D4D6D5] rounded-[8px] secondary-bg font-roboto text-white">
                             <i class="fa-solid fa-phone"></i>
                             <span>Call</span>
                         </button>
@@ -401,14 +416,16 @@
                     <i class="fa-regular fa-clock gray-color text-3xl"></i>
                     <h4 class="font-roboto font-bold text-[1.5rem] dark-color">Call History</h4>
                 </div>
-                <button class="px-[55px] py-2.5 border border-[#D4D6D5] rounded-4xl secondary-bg font-inter font-semibold text-white">
+                <button
+                    class="px-[55px] py-2.5 border border-[#D4D6D5] rounded-4xl secondary-bg font-inter font-semibold text-white">
                     Clear
                 </button>
             </div>
             <div class="call-history-container">
                 <div class="call flex justify-between items-center mx-6 mt-4 p-4 rounded-[8px] bg-[#FAFAFA]">
                     <div>
-                        <h3 class="service-name font-inter font-semibold text-[1.25rem] dark-color">Fire Service Number</h3>
+                        <h3 class="service-name font-inter font-semibold text-[1.25rem] dark-color">Fire Service Number
+                        </h3>
                         <p class="service-number font-madurai text-[1.25rem] gray-color">999</p>
                     </div>
                     <p class="time">
