@@ -9,6 +9,9 @@
 @import "tailwindcss";
 
 @layer utilities {
+    .body{
+        max-width: 95%;
+    }
     .font-madurai {
         font-family: "Hind Madurai", sans-serif;
     }
@@ -54,4 +57,6 @@
     .cards {
         box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.1)
     }
+
+
 }

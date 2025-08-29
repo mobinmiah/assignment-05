@@ -8,9 +8,6 @@ const cardBtns = document.querySelectorAll(".heart-btn")
 const copyBtns = document.querySelectorAll(".copy-btn")
 const callBtns = document.querySelectorAll(".call-btn")
 
-// call history btn
-const callHistoryBtn = document.getElementById("call-history-btn")
-
 const callHistory = [];
 
 // heart btn functionalities
@@ -68,15 +65,9 @@ for (const btn of callBtns) {
                 </div>
             `
             document.getElementById("histories").appendChild(div)
-            console.log(div)
         }
     })
 }
-
-
-
-
-
 
 // copy btn functionalities
 let countCopies = 0;
@@ -95,3 +86,9 @@ for (const btn of copyBtns) {
             })
     })
 }
+
+// clear the call history
+const callHistoryBtn = document.getElementById("call-history-btn")
+callHistoryBtn.addEventListener("click", function () {
+    document.getElementById("histories").innerHTML = "";
+})
