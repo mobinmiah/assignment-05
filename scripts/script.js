@@ -8,12 +8,8 @@ const cardBtns = document.querySelectorAll(".heart-btn")
 const copyBtns = document.querySelectorAll(".copy-btn")
 const callBtns = document.querySelectorAll(".call-btn")
 
-// titles
-// const title = document.querySelectorAll(".card-title")
-
-// call history
+// call history btn
 const callHistoryBtn = document.getElementById("call-history-btn")
-const callHistoryContainer = document.getElementById("call-history-container")
 
 const callHistory = [];
 
@@ -55,23 +51,23 @@ for (const btn of callBtns) {
         }
         callHistory.push(data)
 
-        callHistoryContainer.innerHTML = "";
+        document.getElementById("histories").innerHTML = ""
         for (const call of callHistory) {
             const div = document.createElement("div")
-            div.innerHTML = 
-            `
+            div.innerHTML =
+                `
             <div class="call flex justify-between items-center mx-6 mt-4 p-4 rounded-[8px] bg-[#FAFAFA]">
                     <div>
-                        <h3 class="service-name font-inter font-semibold text-[1.25rem] dark-color">Fire Service Number
+                        <h3 class="service-name font-inter font-semibold text-[1.25rem] dark-color">${call.name}
                         </h3>
-                        <p class="service-number font-madurai text-[1.25rem] gray-color">999</p>
+                        <p class="service-number font-madurai text-[1.25rem] gray-color">${call.number}</p>
                     </div>
                     <p class="time font-madurai text-[1.125rem] dark-color">
-                        11:33:55 AM
+                        ${call.date}
                     </p>
                 </div>
             `
-            callHistoryContainer.appendChild(div)
+            document.getElementById("histories").appendChild(div)
             console.log(div)
         }
     })
